@@ -2,6 +2,16 @@ apiVersion: v1
 entries:
   example:
   - apiVersion: v2
+    appVersion: 1.24.0
+    created: "2024-01-02T20:18:42.680065621Z"
+    description: A Helm chart for Kubernetes
+    digest: e29d5f353a6f0e706718a4e2ef9413c7a1d50810c00e9b3ad6bf7865fbefde49
+    name: example
+    type: application
+    urls:
+    - https://github.com/daftping/helm-charts/releases/download/example-0.1.1/example-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
     appVersion: 1.16.0
     created: "2023-12-22T20:04:00.780312949Z"
     description: A Helm chart for Kubernetes
@@ -11,4 +21,4 @@ entries:
     urls:
     - https://github.com/daftping/helm-charts/releases/download/example-0.1.0/example-0.1.0.tgz
     version: 0.1.0
-generated: "2023-12-22T20:04:00.780321976Z"
+generated: "2024-01-02T20:18:42.680073265Z"
