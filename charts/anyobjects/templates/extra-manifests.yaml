@@ -1,0 +1,17 @@
+{{ range .Values.extraObjectsList }}
+---
+{{- if typeIs "string" . }}
+    {{- tpl . $ }}
+{{- else }}
+    {{- tpl (toYaml .) $ }}
+{{- end }}
+{{ end }}
+
+{{- range $key, $value := .Values.extraObjectsMap }}
+---
+{{- if typeIs "string" $value }}
+    {{- tpl $value $ }}
+{{- else }}
+    {{- tpl (toYaml $value) $ }}
+{{- end }}
+{{- end }}
