@@ -1,0 +1,58 @@
+extraObjectsList: []
+  # - apiVersion: v1
+  #   kind: ConfigMap
+  #   metadata:
+  #     name: "{{ $.Release.Name }}"
+  #   data:
+  #     2KB: "fpcxaoqiaaucpazduegpcasrnvnyrshculwpvzxatpsydxbriwzdfxskslhcgxviyvcwkkdewxbtcywklytpxvkjchsimhhooawmbxwzfnccagwkzruaukkaasvhnsnpffevcffwjvlnnchbqocqbvscxqoxrtmjvihmdcyjgusyjrhihdosuqcdhhqiicpzgcjakmjjzdqigpvuscrzrgknvdirmcmlqapsvhcegzlzmjjyephbtpeaqzrugajewqghnyakhutrrafhltarvhluibpwnlnirugmpjkqaogoexsgfocroewcrrfwbbxquiwirojgxqbqvbcfuhlutfujcorqejgelotweijcifkwfntekcmzaxmzxxcoymdkhspqvmqzdoaiwscfmrbsrpdiarjvvdliyridgzgbjxqjbnkdxzqbogbduzbovhedysqvtqwsjxrmehpvipoltlnznbpzmuqmxwiwafezhjnwaoegzngwlcirrrfaxqmfmleozehpstuxitbtmporknmisqqhvgsoegdmlbzzpxzqzjlnvsdiiruduemyqrhimlklrzhzlalrqyuptpxodbmwuaqubvlrzfqzilzbggykuebgjobvrdrgwsiqnvmylafrspxaradssoebmadtjxqwjcvbvenmwlaiqpltrfnwoqmenintbuuccjbmcxkuvajzgmlfusluhvbhnaxxvvqxnodlgvaucydisztjljfxonbqyfisowdzvlndhpwjjmtuhhralwidtofehrwizwgnzjgpfqfegtwemsamjrrfshhqqcunhopwmnywvjbtsskkaxbaytknqetruqlqvgnwdxfhsrprwmnxcuyakfgdjwtcbgoggnxlydkpxaslqnuxldobtkwoqgvkxoasenmlqgnspfyruypeqimdntgtlpvpovfomcmjdcpjfwugmqnsymjsihkooxdoblqfvfnfiilkolpgevxaxjmpltplookssnurbjgtaixmmukdecerwedlilstrzubbrvfepknamelbqkrhstpapvamlyjummqdjsbzitmisbcaqrvtigmjouawijnjtvelzhxohblqunxhwdxfubtbcewtdclirncqtqvpigyuvfmkljneegvgfjlyaomqwqwodjijoethyagpeytlkuriquuaeshbztwsggokbkddvsvtqhkugvxmrczbkhpjkxizbfpotzwnhbgmluscwpdanlvcndkyxngigzaopwjlqigwjseirmalnvkgxyabhcinhnontuzqmaagqtcqikzvdqigxaevcmhwjevocuwommayxcfpfqygtzjhxkxonlrvjbwnuwhalkjeotcpkryfutgrdjdjbaeyrgegezunbunqctwvkpcdchuumkjuhkypcjmtabprdhkwkvpacbuwnxpnlzqdzlvhcybeqevxswgsmdakmukcsffdvjbhpkjlsjgaxawastbpdtiptasrxjtwekiouehcsljmrovopxvbtrdslsdoucncrxbxifowvsabhontropeboprzxoczyuoikynxvikcmbjpqwuunztxotljqybbucvoxrwqrgxqqcypvozuvqtyatzibjizwgxjyouzybsrufqozcboauqbbcwnyrjftwgkxwusocwwqdfcbiocllkeydlchedltisvwvvyhfrzvohllsfrzsbyaaaqquwsweqpqihuohxxhvqfvzncnwxhevnfoiygzmylguhvltajljjxsxwqvngeqgzrenapslbuobrpozkkmvrvoztrlajqlxrterfnzbacajoehmakuuihwktlysslumlbxmuafwbkzeaqcdxrbaarrgeuqpqropijapbgvtacjrncnwmokwyvadpdnmdcnovzdqxrhwehglfmswveptpmznrbmdecsbozqvqtznbmtnvoqgvclqneyrhobeonlioqziuhoeamwpfdvybcnudkqgviexvkceednolobtsnuowetgimmoxnmpdckcalis"
+  # - apiVersion: apps/v1
+  #   kind: Deployment
+  #   metadata:
+  #     name: "{{ $.Release.Name }}"
+  #   spec:
+  #     replicas: 1
+  #     revisionHistoryLimit: 3
+  #     selector:
+  #       matchLabels:
+  #         app: alpine
+  #     template:
+  #       metadata:
+  #         labels:
+  #           app: alpine
+  #       spec:
+  #         containers:
+  #         - image: alpine:latest
+  #           name: alpine
+  #           command: ["sleep", "infinity"]
+  #           ports:
+  #           - containerPort: 80
+  #           resources:
+  #             requests:
+  #               memory: 50Mi
+  #               cpu: 50m
+  #             limits:
+  #               memory: 50Mi
+  # - apiVersion: batch/v1
+  #   kind: Job
+  #   metadata:
+  #     name: "{{ $.Release.Name }}"
+  #     annotations:
+  #       argocd.argoproj.io/hook: PreSync
+  #       argocd.argoproj.io/hook-delete-policy: HookSucceeded
+  #   spec:
+  #     template:
+  #       spec:
+  #         containers:
+  #         - name: sleep
+  #           image: alpine:latest
+  #           command: ["sleep", "10"]
+  #         restartPolicy: Never
+  #     backoffLimit: 0
+extraObjectsMap: {}
+  # cm-foo:
+  #   apiVersion: v1
+  #   kind: ConfigMap
+  #   metadata:
+  #     name: "{{ $.Release.Name }}-foo"
+  #   data:
+  #     foo: "bar"
