@@ -1,5 +1,13 @@
 apiVersion: v1
 entries:
+  anyobjects:
+  - apiVersion: v2
+    created: "2024-06-26T21:21:14.111218765Z"
+    digest: 727f3a7184a3316b0a32db409a2fca76d9cbefb21bc82f455421a887775c4f49
+    name: anyobjects
+    urls:
+    - https://github.com/daftping/helm-charts/releases/download/anyobjects-1.0.5/anyobjects-1.0.5.tgz
+    version: 1.0.5
   example:
   - apiVersion: v2
     appVersion: "1.25"
@@ -31,4 +39,4 @@ entries:
     urls:
     - https://github.com/daftping/helm-charts/releases/download/example-0.1.0/example-0.1.0.tgz
     version: 0.1.0
-generated: "2024-01-02T21:39:58.745863871Z"
+generated: "2024-06-26T21:21:14.111234535Z"
